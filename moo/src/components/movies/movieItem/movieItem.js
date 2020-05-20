@@ -3,7 +3,7 @@ import { Modal } from 'react-responsive-modal';
 
 export default (props) => {
     const [state, setState] = useState({open: false});
-    const {img, title, year} = props.movie
+    const {img, title, year, poster, description, imdb, director} = props.movie
 
     const onOpenModal = () => {
         setState({ open: true });
@@ -26,7 +26,7 @@ export default (props) => {
                 <h3 className="movie-modal-title">{title}</h3>
                 <p className="movie-modal-year">{year}</p>
 
-                <div class="movie-modal-container">
+                <div className="movie-modal-container">
                     <h4 className="movie-modal-heading">Description</h4>
                     <p className="movie-modal-description">{description}</p>
                 </div>

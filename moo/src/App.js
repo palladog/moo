@@ -15,18 +15,36 @@ import {
 function App() {
   const [state, setState] = useState({movies:[]})
 
+  const loadFromStorage = () => {
+    let jsonMovies = localStorage.getItem('movies')
+    let movies = JSON.parse(jsonMovies)
+    return movies
+  }
+  
+  const saveToStorage = (data) => {
+    localStorage.setItem('movies', JSON.stringify(data))
+    console.log("Saved to local storage")
+  }
+
   const getData = () => {
+    let movies = loadFromStorage()
+    if (movies !== null) {
+      console.log("inte null")
+      setState({movies: movies})
+      return
+    }
+    console.log("null")
     fetch('https://ghibliapi.herokuapp.com/films') // Returns all films
-    .then(response=>response.json())
+    .then(response => response.json())
     .then(response => {
       response.forEach(item => {
         getMovieDetz(item)
-      });
+      })
     })
   }
   
   const getMovieDetz = (ghibli) => {
-    fetch(`http://www.omdbapi.com/?t=${ghibli.title}&apikey=50c51323`) // Returns a movie from OMDB
+    fetch(`http://www.omdbapi.com/?t=${ghibli.title}&apikey=50c51323`) // Returns a Ghibli movie from OMDb
     .then(response => response.json())
     .then(response => {
           let movie = {
@@ -41,6 +59,7 @@ function App() {
         let movies = state.movies
         movies.push(movie)
         setState({movies: movies})
+        saveToStorage(state.movies)
       }
     )
   }
