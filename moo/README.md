@@ -10,7 +10,9 @@ We have mainly coded using the [VS Code](https://code.visualstudio.com/) extensi
 ## Requirements
 Make sure you have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed.
 
-## Installation with `yarn start`
+## Installation 
+
+### `yarn start`
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
