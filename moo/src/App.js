@@ -29,11 +29,9 @@ function App() {
   const getData = () => {
     let movies = loadFromStorage()
     if (movies !== null) {
-      console.log("inte null")
       setState({movies: movies})
       return
     }
-    console.log("null")
     fetch('https://ghibliapi.herokuapp.com/films') // Returns all films
     .then(response => response.json())
     .then(response => {
@@ -75,10 +73,10 @@ function App() {
           <Nav />
           <Switch>
             <Route path="/watched">
-              <Watched />
+              <Watched movies={state.movies}/>
             </Route>
             <Route path="/not-watched">
-              <NotWatched />
+              <NotWatched movies={state.movies}/>
             </Route>
             <Route path="/">
               <Home movies={state.movies}/>
