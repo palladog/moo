@@ -13,22 +13,41 @@ import {
 
 
 function App() {
-  const [state, setState] = useState({ghibli: null})
+  const [state, setState] = useState({movies:[]})
 
-  const getGhibliData = () => {
+  const getData = () => {
     fetch('https://ghibliapi.herokuapp.com/films') // Returns all films
     .then(response=>response.json())
     .then(response => {
-      setState({...state,
-        ghibli: response
-      })
+      response.forEach(item => {
+        getMovieDetz(item)
+      });
     })
+  }
+  
+  const getMovieDetz = (ghibli) => {
+    fetch(`http://www.omdbapi.com/?t=${ghibli.title}&apikey=50c51323`) // Returns a movie from OMDB
+    .then(response => response.json())
+    .then(response => {
+          let movie = {
+          title: ghibli.title,
+          year: ghibli.release_date,
+          description: ghibli.description,
+          director: ghibli.director,
+          poster: response.Poster,
+          imdb: `https://www.imdb.com/title/${response.imdbID}`,
+          rating: null
+        }
+        let movies = state.movies
+        movies.push(movie)
+        setState({movies: movies})
+      }
+    )
   }
 
   useEffect(() =>{
-    getGhibliData()
-  }, [])
-  
+      getData()
+  }, []) 
 
   return (
     <div className="App">
@@ -36,14 +55,14 @@ function App() {
         <Header/>
           <Nav />
           <Switch>
-            <Route path="/home">
-              <Home />
-            </Route>
             <Route path="/watched">
               <Watched />
             </Route>
             <Route path="/not-watched">
               <NotWatched />
+            </Route>
+            <Route path="/">
+              <Home movies={state.movies}/>
             </Route>
           </Switch>
       </Router>

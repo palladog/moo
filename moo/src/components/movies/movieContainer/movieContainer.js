@@ -1,9 +1,14 @@
 import React from 'react';
 
-export default () => {
+export default (props) => {
+    /* const {ghibli} = props.movies
+    console.log(props) 
+    */
     return(
         <React.Fragment>
-            <div>Movielist</div>
+            {/* {ghibli && ghibli.map(function(item, i){
+                return <li key={i}>{item.title}</li>
+                })} */}
         </React.Fragment>
     )
 }

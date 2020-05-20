@@ -7,7 +7,7 @@ export default () => {
           <nav>
             <ul className="menu">
               <li className="menu-item">
-                <Link to="/home">All</Link>
+                <Link to="/">All</Link>
               </li>
               <li className="menu-item">
                 <Link to="/watched">Watched</Link>
