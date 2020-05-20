@@ -1,16 +1,14 @@
 import React from 'react';
 import MovieItem from '../movieItem/movieItem'
+import './movieContainer.css'
 
 export default (props) => {
-    /* const {ghibli} = props.movies
-    */
-   console.log(props) 
+   /* console.log(props)  */
     return(
-        <React.Fragment>
+        <div className="movie-container">
             {props.movies.map(function(item, i){
-                return <MovieItem key={i} movie={item}/>
-                })}
-            
-        </React.Fragment>
+            return <MovieItem key={i} movie={item}/>
+            })}
+        </div>
     )
 }
