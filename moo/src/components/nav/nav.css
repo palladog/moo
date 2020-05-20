@@ -1,3 +1,31 @@
-ul {
-    list-style: none;
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style-type: none;
+    /*background: var(--blue);*/
+    border: solid var(--black);
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    padding: 0px;
+    /*box-shadow: 0 0 10px var(--black);*/
+}
+
+.menu-item > a {
+    text-decoration: none;
+    display: block;
+    margin: 0.5em 1em;
+    color: var(--black);
+    /*background-color: var(--black);
+    box-shadow: 0 0 10px var(--black);*/
+    padding: 0.5em 1em;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.menu-item > a:hover {
+    color: var(--blue);
+    text-decoration: underline;
 }

@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+
+@font-face {
+    font-family: 'ITC';
+    src: url(./resources/ITC_Avant_Garde_Gothic_LT_Medium.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    /* Colors variables */
+    --blue: #01a3ec;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #eeeeee;
+    --yellow: #EFCE4A;
+
+    /* Font Variables */
+    --main-font: 'ITC';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html { font-size: 16px; }
+
+body {
+    background-color: var(--white);
+    font-family: var(--main-font);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hidden {
+    /* Hidden visibly, but not from screen readers */
+    position: absolute;
+    top: -100%; 
+    opacity: 0;
 }

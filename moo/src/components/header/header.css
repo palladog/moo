@@ -1,0 +1,11 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
