@@ -29,3 +29,9 @@
     color: var(--blue);
     text-decoration: underline;
 }
+
+.active {
+    font-weight: "bold";
+    color: var(--blue)!important;
+    text-decoration: underline;
+}

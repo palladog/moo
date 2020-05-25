@@ -1,19 +1,20 @@
 import React from 'react';
 import './nav.css';
-import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 
 export default () => {
     return(
           <nav>
             <ul className="menu">
               <li className="menu-item">
-                <Link to="/">All</Link>
+                <NavLink to="/" activeClassName="active"><span className="title">Home</span></NavLink>
               </li>
               <li className="menu-item">
-                <Link to="/watched">Watched</Link>
+                <NavLink to="/watched" activeClassName="active"><span className="title">Watched</span></NavLink>
               </li>
+              
               <li className="menu-item">
-                <Link to="/not-watched">Not Watched</Link>
+                <NavLink to="/not-watched" activeClassName="active"><span className="title">Not Watched</span></NavLink>
               </li>
             </ul>
           </nav>      
