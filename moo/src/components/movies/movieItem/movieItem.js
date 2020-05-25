@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './movieItem.css'
+import Rating from '../rating/rating'
+import { loadFromStorage, saveToStorage } from '../../../App'
 
 export default (props) => {
-    const {title, year, poster, description, imdb, director} = props.movie
+    const {title, year, poster, description, imdb, director, rating} = props.movie
     const [state, setState] = useState({open: false})
     
     const toggleModal = () => {
@@ -10,6 +12,13 @@ export default (props) => {
         setState({ open: !currentState});
         console.log("modal")
     };
+
+    const updateRating = (rating) => {
+        let movies = loadFromStorage()
+        const index = movies.findIndex(movie => movie.title === title)
+        movies[index].rating = rating
+        saveToStorage(movies)
+    }
 
     return(
         <React.Fragment>
@@ -33,7 +42,7 @@ export default (props) => {
                         <h4 className="movie-modal-heading">Director</h4>
                         <p className="movie-modal-director">{director}</p>
                     </div>
-                    {/* RATING COMPONENT */}
+                    <Rating updateRating={updateRating} rating={rating}/>
                 </div>
             </div>
         </React.Fragment>

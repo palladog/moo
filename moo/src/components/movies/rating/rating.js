@@ -1,39 +1,49 @@
-import React from 'react';
-import star from '../../../resources/star.svg';
+import React, { useState } from 'react';
+import './rating.css';
+import Star from '../../../resources/star.js';
+import CrissCross from '../../../resources/crissCross.js';
 
-export default (props) => {
+export default (props) => {   
+    const [rating, setRating] = useState(props.rating);
+    const [hover, setHover] = useState(null);
+    const [crossHover, setCrossHover] = useState(null);
+
+    const onClickHandler = (e) => {
+        let rating = e.target.value === undefined ? null : e.target.value
+        setRating(rating)
+        props.updateRating(rating)
+    };
+
     return (
-        <div className="rating-container">
-            <div className="rating-item">
-                <label className="rating-item-star" for="first-star">
-                    {star}
-                </label>
-                <input className="rating-item-radio hidden" type="radio" name="star" id="first-star" value="1" />
-                    
-                <label className="rating-item-star" for="second-star">
-                    {star}
-                </label>
-                <input className="rating-item-radio hidden" type="radio" name="star" id="second-star" value="2" />
-
-                <label className="rating-item-star" for="third-star">
-                    {star}
-                </label>
-                <input className="rating-item-radio hidden" type="radio" name="star" id="third-star" value="3" />
-
-                <label className="rating-item-star" for="fourth-star">
-                    {star}
-                </label>
-                <input className="rating-item-radio hidden" type="radio" name="star" id="fourth-star" value="r" />
-
-                <label className="rating-item-star" for="fifth-star">
-                    {star}
-                </label>
-                <input className="rating-item-radio hidden" type="radio" name="star" id="fifth-star" value="5" />
-            </div>
-            <div ClassName="remove-rating">
-                <a href="#" class="clear-rating"/>
-            </div>   
+        <div
+        onMouseEnter={() => setCrossHover(true)}
+        onMouseLeave={() => setCrossHover(false)}>
+                    {[...Array(5)].map((el, i) => {
+                const ratingVal = i + 1;
+                return(
+                    <span key={i}>
+                        <label>
+                            <input 
+                            className="hidden"
+                            type="radio" 
+                            name="star" 
+                            value={ratingVal}
+                            onClick={onClickHandler}
+                            />
+                            <Star
+                            alt='rating-star'
+                            setHover={setHover}
+                            ratingVal={ratingVal}
+                            color={ratingVal <= (hover || rating) ? '#FFC107' : '#333'}                                 
+                            />
+                        </label>
+                    </span>
+                )}
+            )}
+            <CrissCross 
+            opacity={crossHover ? 1 : 0}
+            remove={onClickHandler}
+            />
         </div>
-        
     )
 }

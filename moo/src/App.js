@@ -11,20 +11,19 @@ import {
   Route
 } from "react-router-dom";
 
+export const loadFromStorage = () => {
+  let jsonMovies = localStorage.getItem('movies')
+  let movies = JSON.parse(jsonMovies)
+  return movies
+}
+
+export const saveToStorage = (data) => {
+  localStorage.setItem('movies', JSON.stringify(data))
+  console.log("Saved to local storage")
+}
 
 function App() {
   const [state, setState] = useState({movies:[]})
-
-  const loadFromStorage = () => {
-    let jsonMovies = localStorage.getItem('movies')
-    let movies = JSON.parse(jsonMovies)
-    return movies
-  }
-  
-  const saveToStorage = (data) => {
-    localStorage.setItem('movies', JSON.stringify(data))
-    console.log("Saved to local storage")
-  }
 
   const getData = () => {
     let movies = loadFromStorage()
