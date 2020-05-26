@@ -1,5 +1,8 @@
 .rating-icons {
-    width: 6%;
+    width: 30px;
     height: auto;
 }
 
+@media screen and (max-width: 360px) {
+    .rating-icons { width: 20px; }
+}

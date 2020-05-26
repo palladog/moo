@@ -34,23 +34,28 @@ export default (props) => {
 
             <div className={`movie-modal-container ${state.open ? "show-modal" : ""}`} onClick={toggleModal}>
                 <div className={`movie-modal`}>
-                    <img className="movie-modal-image" src={poster} alt={title} />
-                    <h3 className="movie-modal-title">{title}</h3>
-                    <p className="movie-modal-year">{year}</p>
+                    <div className="movie-modal-content modal-main">
+                        <img className="movie-modal-image" src={poster} alt={title} />
+                        <h3 className="movie-modal-title">{title}</h3>
+                        <p className="movie-modal-year">{year}</p>
+                    </div>
 
-                    <div className="movie-modal-content">
+                    <div className="movie-modal-content modal-description">
                         <h4 className="movie-modal-heading">Description</h4>
                         <p className="movie-modal-description">{description}</p>
                     </div>
-                    <div className="movie-modal-content">
+                    <div className="movie-modal-content modal-director">
                         <h4 className="movie-modal-heading">Director</h4>
                         <p className="movie-modal-director">{director}</p>
                     </div>
-                    <div className="movie-modal-content">
+                    <div className="movie-modal-content modal-readmore">
                         <h4 className="movie-modal-heading">Read more</h4>
-                        <a className="imdb-logo unclose" target="_blank" href={imdb}><img className="unclose" src={imdbImg}/></a>
+                        <a className="imdb-logo unclose" target="_blank" href={imdb} rel="noopener noreferrer"><img className="unclose" src={imdbImg}/></a>
                     </div>
-                    <Rating updateRating={updateRating} rating={rating}/>
+                    <div className="movie-modal-content modal-rating">
+                        <h4 className="movie-modal-heading">Rating</h4>
+                        <Rating updateRating={updateRating} rating={rating}/>
+                    </div>
                 </div>
             </div>
         </React.Fragment>
