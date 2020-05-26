@@ -7,7 +7,7 @@ export default () => {
           <nav>
             <ul className="menu">
               <li className="menu-item">
-                <NavLink exact to="/" activeClassName="active"><span className="title">Home</span></NavLink>
+                <NavLink exact to="/" activeClassName="active"><span className="title">All</span></NavLink>
               </li>
               <li className="menu-item">
                 <NavLink exact to="/watched" activeClassName="active"><span className="title">Watched</span></NavLink>

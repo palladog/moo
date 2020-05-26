@@ -8,9 +8,11 @@
     border: solid var(--black);
     margin: auto;
     width: 70%;
+    max-width: 800px;
     text-align: center;
     padding: 0px;
     /*box-shadow: 0 0 10px var(--black);*/
+    
 }
 
 .menu-item > a {
@@ -32,4 +34,22 @@
 
 .active {
     color: var(--blue)!important;
+}
+
+@media only screen and (max-width: 800px){
+    .menu{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 563px){
+    .menu{
+        flex-direction: column;
+
+    }
+    .menu-item:not(:last-child){
+        border-bottom: solid;
+    }
+
 }
