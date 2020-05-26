@@ -6,7 +6,7 @@ import CrissCross from '../../../resources/crissCross.js';
 export default (props) => {   
     const [rating, setRating] = useState(props.rating);
     const [hover, setHover] = useState(null);
-    const [crossHover, setCrossHover] = useState(null);
+    const [crossHover, setCrossHover] = useState(window.innerWidth <= 900 ? true :null); //if width is wider doesnt need to hover to remove rating
 
     const onClickHandler = (e) => {
         e.preventDefault();
