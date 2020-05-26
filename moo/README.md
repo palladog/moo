@@ -1,4 +1,9 @@
 # Ghibli Movie Marathon App 
+The perfect Studio Ghibli marathon companion! 
+
+A React web app that fetches all movies from the [Studio Ghibli API](https://ghibliapi.herokuapp.com/), as well as movie posters from the [OMDb API](http://www.omdbapi.com/), for the user to read more about and rate after watching. After being rated, the movie can be found in the "Watched" page. All movies not rated can be seen in the "Not watched" page, to facilitate the movie marathon experience. 
+
+The fetched API data, along with a "rating" key, is saved to ’localStorage’ and then updated whenever the user adds, updates, or removes a rating. 
 
 ## Developers
 * [Omar Alsaif](https://github.com/OmarAlsaif)
@@ -11,7 +16,7 @@ We have mainly coded using the [VS Code](https://code.visualstudio.com/) extensi
 Make sure you have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed.
 
 ## Installation 
-In this example, we're using the package manager `yarn`.
+In this example, we're using `yarn`; however, other package managers (e.g. `npm`)
 
 ### `yarn`
 Install all the dependencies listed within `package.json` in the local `node_modules` folder. Running yarn with no command is the same thing as running `yarn install`.
