@@ -39,5 +39,7 @@ In continuation of the learning curve subject, React is not the framework of cho
 
 ## Sources
 [1] [https://www.similartech.com/compare/angular-js-vs-react-js](https://www.similartech.com/compare/angular-js-vs-react-js)
+
 [2] [https://2019.stateofjs.com/front-end-frameworks/](https://2019.stateofjs.com/front-end-frameworks/)
+
 [3] [https://www.typescriptlang.org/docs/handbook/angular.html](https://www.typescriptlang.org/docs/handbook/angular.html)
