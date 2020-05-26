@@ -12,7 +12,6 @@ export default (props) => {
     return (
         <React.Fragment>
             <h2 className="hidden">Watched</h2>
-            <p>WATCHED!</p>
             <MovieContainer movies={watchedMovies}/>
         </React.Fragment>       
     )
