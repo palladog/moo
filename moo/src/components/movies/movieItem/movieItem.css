@@ -35,7 +35,7 @@
     height: 100%;
     overflow: auto;
     background-color: var(--black); /* Fallback */
-    background-color: rgba(0, 0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .movie-modal {
