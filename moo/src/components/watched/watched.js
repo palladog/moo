@@ -1,8 +1,10 @@
 import React from 'react';
 import MovieContainer from '../movies/movieContainer/movieContainer';
+import { loadFromStorage } from '../../App';
 
 export default (props) => {
-    let watchedMovies = props.movies.filter(movie => movie.rating !== null)
+
+    let watchedMovies = loadFromStorage().filter(movie => movie.rating !== null)
     if(watchedMovies.length === 0){
         return("KOLLA PÅ NÅGON FILM OCH BETYGSÄTT DEN DÅ") //placeholder
     }

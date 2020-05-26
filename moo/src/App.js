@@ -72,13 +72,13 @@ function App() {
           <Nav />
           <Switch>
             <Route path="/watched">
-              <Watched movies={state.movies}/>
+              <Watched />
             </Route>
             <Route path="/not-watched">
-              <NotWatched movies={state.movies}/>
+              <NotWatched />
             </Route>
             <Route path="/">
-              <Home movies={state.movies}/>
+              <Home />
             </Route>
           </Switch>
       </Router>
