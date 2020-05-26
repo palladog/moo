@@ -5,7 +5,8 @@ header {
     margin: 1em 0;
 }
 
-.header-image {
-    width: 100%;
+#header-image {
+    width: 90vw;
+    max-width: 700px;
     height: auto;
 }
