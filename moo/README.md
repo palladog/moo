@@ -11,6 +11,10 @@ We have mainly coded using the [VS Code](https://code.visualstudio.com/) extensi
 Make sure you have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed.
 
 ## Installation 
+In this example, we're using the package manager `yarn`.
+
+### `yarn`
+Install all the dependencies listed within `package.json` in the local `node_modules` folder. Running yarn with no command is the same thing as running `yarn install`.
 
 ### `yarn start`
 Runs the app in the development mode.<br />
