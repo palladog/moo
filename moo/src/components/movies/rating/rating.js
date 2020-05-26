@@ -21,15 +21,16 @@ export default (props) => {
                     {[...Array(5)].map((el, i) => {
                 const ratingVal = i + 1;
                 return(
-                    <span key={i} onClick={onClickHandler}>
+                    <span key={i} onClick={onClickHandler} className="unclose">
                         <label>
                             <input 
-                            className="hidden"
+                            className="hidden unclose"
                             type="radio" 
                             name="star" 
                             value={ratingVal}
                             />
                             <Star
+                            className="unclose"
                             setHover={setHover}
                             ratingVal={ratingVal}
                             color={ratingVal <= (hover || rating) ? '#FFC107' : '#333'}                                 
@@ -39,6 +40,7 @@ export default (props) => {
                 )}
             )}
             <CrissCross 
+            className="unclose"
             opacity={crossHover ? 1 : 0}
             remove={onClickHandler}
             />
