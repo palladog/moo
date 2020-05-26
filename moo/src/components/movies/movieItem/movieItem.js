@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './movieItem.css'
 import Rating from '../rating/rating'
 import { loadFromStorage, saveToStorage } from '../../../App'
+import imdbImg from '../../../resources/imdb.jpg'
 
 export default (props) => {
     const {title, year, poster, description, imdb, director, rating} = props.movie;
@@ -46,8 +47,8 @@ export default (props) => {
                         <p className="movie-modal-director">{director}</p>
                     </div>
                     <div className="movie-modal-content">
-                        <h4 className="movie-modal-heading">IMDb</h4>
-                        <a href={imdb} target="_blank" className="movie-modal-director unclose">{imdb}</a>
+                        <h4 className="movie-modal-heading">Read more</h4>
+                        <a className="imdb-logo" href={imdb}><img src={imdbImg}/></a>
                     </div>
                     <Rating updateRating={updateRating} rating={rating}/>
                 </div>

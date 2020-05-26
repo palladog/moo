@@ -49,3 +49,7 @@
 .show-modal {
     display: block;
 }
+
+.imdb-logo > img{
+    width: 18%; 
+}
