@@ -48,7 +48,7 @@ export default (props) => {
                     </div>
                     <div className="movie-modal-content">
                         <h4 className="movie-modal-heading">Read more</h4>
-                        <a className="imdb-logo" href={imdb}><img src={imdbImg}/></a>
+                        <a className="imdb-logo unclose" target="_blank" href={imdb}><img className="unclose" src={imdbImg}/></a>
                     </div>
                     <Rating updateRating={updateRating} rating={rating}/>
                 </div>
