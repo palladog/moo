@@ -19,7 +19,6 @@ export const loadFromStorage = () => {
 
 export const saveToStorage = (data) => {
   localStorage.setItem('movies', JSON.stringify(data))
-  console.log("Saved to local storage")
 }
 
 function App() {
@@ -72,13 +71,13 @@ function App() {
           <Nav />
           <Switch>
             <Route path="/watched">
-              <Watched />
+              <Watched movies={state.movies}/>
             </Route>
             <Route path="/not-watched">
-              <NotWatched />
+              <NotWatched movies={state.movies}/>
             </Route>
             <Route path="/">
-              <Home />
+              <Home movies={state.movies}/>
             </Route>
           </Switch>
       </Router>

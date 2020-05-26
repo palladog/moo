@@ -5,7 +5,7 @@ import Message from '../message/message'
 
 export default (props) => {
     const msg = "You have watched all the movies there are " //placeholder
-    let notWatchedMovies = loadFromStorage().filter(movie => movie.rating === null)
+    let notWatchedMovies = (loadFromStorage() || props.movies).filter(movie => movie.rating === null)
     if(notWatchedMovies.length === 0){
         return(<Message msg={msg} />)
     }
