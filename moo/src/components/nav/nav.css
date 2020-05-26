@@ -31,7 +31,5 @@
 }
 
 .active {
-    font-weight: "bold";
     color: var(--blue)!important;
-    text-decoration: underline;
 }
