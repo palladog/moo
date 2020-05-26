@@ -29,5 +29,15 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ## Choice of Framework
+[React JS](https://reactjs.org/) was chosen in large part because it is the framework the developers had the most experience with, but also since it is the one the developers wish to have *more* experience with. React is arguably the most widespread JavaScript framework right now, and in contrast to its close competitor [Angular JS](https://angular.io/), its popularity is still on the increase [1]. According to SimilarTech, React is in the lead of the top 10K sites, top 1M Sites as well as the entire web. In addition, State of JavaScript 2020's findings showed that 71% of those who have used React would use it again [2](https://2019.stateofjs.com/front-end-frameworks/). In summation, React is an attractive choice of framework.
+
+Popularity aside, React has some drawbacks – mainly that it is not a complete framework like Angular is. React JS does not offer routing natively – something Angular does – although this can easily be rectified with a package that offers declarative routing, such as [React Router](https://reacttraining.com/react-router/). Although it requires importing an external package, using said package is easy (especially considering its extensive documentation).
+
+Another reason for choosing React over Angular is in regards to the learning curve. Although React is not easy by any means, it did not require us learning an unfamiliar programming language. Granted, Angular being built entirely in TypeScript [3] – an offshoot of JavaScript – is easier than learning a completely different language. However, choosing a framework without needing to spend time to familiarize oneself with the language is preferable when there is a two-week project deadline.
+
+In continuation of the learning curve subject, React is not the framework of choice had this been the deciding factor. [Vue JS](https://vuejs.org/) is easier to learn in comparison, owing to the syntax where the HTML, JavaScript, and CSS code of one component is all roomed in a single file in the same way that JavaScript and CSS would be written in a normal HTML document. React not only separates HTML, JavaScript, and CSS into different files, but also combines the three by having JavaScript files rendering HTML and changing CSS attributes. For this reason, React is more difficult to implement as a beginner – but considering the developers of this project has studied and practiced programming and web development for two years, it is not enough of a reason to deter from choosing React as the project's framework. 
 
 ## Sources
+[1] [https://www.similartech.com/compare/angular-js-vs-react-js](https://www.similartech.com/compare/angular-js-vs-react-js)
+[2] [https://2019.stateofjs.com/front-end-frameworks/](https://2019.stateofjs.com/front-end-frameworks/)
+[3] [https://www.typescriptlang.org/docs/handbook/angular.html](https://www.typescriptlang.org/docs/handbook/angular.html)
