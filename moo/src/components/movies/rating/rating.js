@@ -9,9 +9,9 @@ export default (props) => {
     const [crossHover, setCrossHover] = useState(null);
 
     const onClickHandler = (e) => {
-        let rating = e.target.value === undefined ? null : e.target.value
-        setRating(rating)
-        props.updateRating(rating)
+        e.preventDefault();
+        setRating(hover);
+        props.updateRating(hover);
     };
 
     return (
@@ -21,17 +21,15 @@ export default (props) => {
                     {[...Array(5)].map((el, i) => {
                 const ratingVal = i + 1;
                 return(
-                    <span key={i}>
+                    <span key={i} onClick={onClickHandler}>
                         <label>
                             <input 
                             className="hidden"
                             type="radio" 
                             name="star" 
                             value={ratingVal}
-                            onClick={onClickHandler}
                             />
                             <Star
-                            alt='rating-star'
                             setHover={setHover}
                             ratingVal={ratingVal}
                             color={ratingVal <= (hover || rating) ? '#FFC107' : '#333'}                                 

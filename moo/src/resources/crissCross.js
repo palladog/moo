@@ -1,11 +1,12 @@
 import React from 'react'
 
 export default (props) => {
-    const {color, width, height, opacity } = props;
+    const { color, opacity } = props;
 
     return(
         <svg 
-        width={'6%'} 
+        className='rating-icons'
+        alt='rating-removal'
         onClick={props.remove}
         opacity={opacity}
         viewBox="0 0 512 512">
