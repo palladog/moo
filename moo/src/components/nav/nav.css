@@ -17,8 +17,6 @@
     display: block;
     margin: 0.5em 1em;
     color: var(--black);
-    /*background-color: var(--black);
-    box-shadow: 0 0 10px var(--black);*/
     padding: 0.5em 1em;
     font-size: 1.3rem;
     letter-spacing: 1px;
@@ -33,14 +31,14 @@
     color: var(--blue)!important;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
     .menu{
         width: 100%;
         margin: 0;
     }
 }
 
-@media only screen and (max-width: 563px){
+@media only screen and (max-width: 563px) {
     .menu{
         flex-direction: column;
 
@@ -53,5 +51,5 @@
         font-size: 1.1rem;
         padding: 0.6em;
     }
-
+    
 }
