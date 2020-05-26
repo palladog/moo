@@ -4,15 +4,12 @@
     flex-wrap: nowrap;
     justify-content: space-around;
     list-style-type: none;
-    /*background: var(--blue);*/
     border: solid var(--black);
     margin: auto;
     width: 70%;
     max-width: 800px;
     text-align: center;
     padding: 0px;
-    /*box-shadow: 0 0 10px var(--black);*/
-    
 }
 
 .menu-item > a {
@@ -50,6 +47,11 @@
     }
     .menu-item:not(:last-child){
         border-bottom: solid;
+    }
+
+    .menu-item a {
+        font-size: 1.1rem;
+        padding: 0.6em;
     }
 
 }
