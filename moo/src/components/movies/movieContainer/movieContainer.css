@@ -3,4 +3,17 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    margin: 2em 12em;
+}
+
+@media screen and (max-width: 1300px){
+    .movie-container{
+        margin: 2em 4em;
+    }
+}
+
+@media screen and (max-width: 710px){
+    .movie-container{
+        margin: 0;
+    }
 }

@@ -14,6 +14,13 @@
     text-align: center;
 }
 
+.movie-item-year {
+    margin-bottom: 0.5em;
+}
+
+.movie-item-title {
+    margin-top: 0.5em;
+}
 .movie-item-image {
     width: 100%;
     object-fit: cover;
@@ -41,7 +48,12 @@
     margin: auto;
     padding: 2em;
     width: 70%;
+    max-width: 1080px;
     height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: grid;
     grid-template-columns: 300px, 1fr;
     grid-template-rows: repeat(4, max-content);
@@ -51,6 +63,8 @@
         "main director"
         "main readmore";
 }
+
+
 
 /* Containers */
 
@@ -82,6 +96,13 @@
     margin-bottom: 1em;
 }
 
+.movie-modal-title{
+    font-size: 1.5rem;
+}
+.movie-modal-heading{
+    font-size: 1.25rem;
+}
+
 .movie-modal-image {
     width: 100%;
     max-width: 300px;
@@ -93,6 +114,10 @@
 
 @media screen and (max-width: 1000px) {
     .movie-modal {
+        position: initial;
+        top: initial;
+        left: initial;
+        transform: initial;
         grid-template-areas:
             "main main"
             "rating rating"

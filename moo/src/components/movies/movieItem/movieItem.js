@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './movieItem.css'
 import Rating from '../rating/rating'
 import { loadFromStorage, saveToStorage } from '../../../App'
-import imdbImg from '../../../resources/imdb.jpg'
+import imdbImg from '../../../resources/imdb.png'
 
 export default (props) => {
     const {title, year, poster, description, imdb, director, rating} = props.movie;

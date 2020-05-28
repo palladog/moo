@@ -33,7 +33,7 @@ export default (props) => {
                             className="unclose"
                             setHover={setHover}
                             ratingVal={ratingVal}
-                            color={ratingVal <= (hover || rating) ? '#FFC107' : '#333'}                                 
+                            color={ratingVal <= (hover || rating) ? 'var(--yellow)' : '#333'}                                 
                             />
                         </label>
                     </span>
