@@ -13,7 +13,6 @@ export default (props) => {
         setRating(hover);
         props.updateRating(hover);
     };
-
     return (
         <div
         onMouseEnter={() => setCrossHover(true)}
