@@ -50,7 +50,7 @@ export default (props) => {
                     </div>
                     <div className="movie-modal-content modal-readmore">
                         <h4 className="movie-modal-heading">Read more</h4>
-                        <a className="imdb-logo unclose" target="_blank" href={imdb} rel="noopener noreferrer"><img className="unclose" src={imdbImg}/></a>
+                        <a className="imdb-logo unclose" target="_blank" href={imdb} rel="noopener noreferrer"><img className="unclose" src={imdbImg} alt="IMDB logo"/></a>
                     </div>
                     <div className="movie-modal-content modal-rating">
                         <h4 className="movie-modal-heading">Rating</h4>
